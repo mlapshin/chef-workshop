@@ -23,7 +23,7 @@
 
 Используйте системный руби, если его версия не 1.8.7. В противном
 случае, установите руби с помощью
-[Homebrew](http://mxcl.github.com/homebrew/):
+[Homebrew](http://brew.sh/):
 
     $ brew install ruby
 
