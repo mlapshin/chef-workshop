@@ -9,7 +9,7 @@ describe 'redmine::app' do
     chef.json = {
       redmine: {
         db_host: vm0.ip,
-        db_passowrd: 's3cure'
+        db_password: 's3cure'
       }
     }
 
