@@ -38,3 +38,25 @@ file '/home/redmine/redmine/config/database.yml' do
   group 'redmine'
   content database_yml.to_yaml
 end
+
+
+file '/home/redmine/redmine/Gemfile.local' do
+  user 'redmine'
+  group 'redmine'
+
+  content "gem 'unicorn'"
+end
+
+package 'ruby1.9.3'
+gem_package 'bundler'
+
+package "libmagickwand-dev"
+package "libxslt-dev"
+package "libxml2-dev"
+package "libpq-dev"
+
+execute 'install bundled gems' do
+  cwd '/home/redmine/redmine'
+  command 'bundle install --path vendor/bundle'
+  user 'redmine'
+end

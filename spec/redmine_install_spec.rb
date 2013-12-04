@@ -21,4 +21,14 @@ describe 'redmine::install recipe' do
   it "should create database.yml file" do
     vm0.should have_file("/home/redmine/redmine/config/database.yml")
   end
+
+  it "should install bundled gems" do
+    result = vm0.execute_as "redmine", "cd /home/redmine/redmine && bundle show"
+    result.should be_successful
+
+    result.stdout.should include("rails")
+    result.stdout.should include("rmagick")
+    result.stdout.should include("pg")
+    result.stdout.should include("unicorn")
+  end
 end
