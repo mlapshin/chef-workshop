@@ -1,4 +1,3 @@
-ENV["SKIPROLLBACK"] = '1'
 require 'spec_helper'
 
 describe "redmine::pg recipe" do
