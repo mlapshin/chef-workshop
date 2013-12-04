@@ -9,6 +9,6 @@ describe "redmine::pg recipe" do
     vm0.should listen_port(5455)
     vm0.should have_user("postgres").in_group("postgres")
 
-    vm0.execute_as("postgres", "psql -A -t -d postgres -c 'select 1+1'").stdout.should == "2\n"
+    vm0.execute_as("postgres", "psql -A -t -d postgres -c 'select 1+1'").stdout.should == "2"
   end
 end
