@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe 'redmine::install recipe' do
   run_chef_on :vm0 do |chef|
+    chef.json = {
+      redmine: {
+        db_host: "10.10.10.10",
+        db_password: "some password"
+      }
+    }
     chef.add_recipe "redmine::install"
   end
 
