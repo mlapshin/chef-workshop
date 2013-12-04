@@ -1,0 +1,6 @@
+start on filesystem
+respawn
+<% if @kill_signal %>
+kill signal <%= @kill_signal %>
+<% end %>
+exec <%= @command %>

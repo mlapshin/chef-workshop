@@ -1,0 +1,21 @@
+upstream redmine {
+  server unix:/home/redmine/redmine/tmp/sockets/unicorn.sock ;
+}
+
+server {
+  listen *;
+  server_name Redmine;
+
+  location / {
+    root /home/redmine/redmine/public;
+    try_files $uri @redmine ;
+  }
+
+  location @redmine {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    # pass to the upstream unicorn server mentioned above
+    proxy_pass http://redmine ;
+  }
+}
