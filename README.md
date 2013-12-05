@@ -50,6 +50,12 @@
     $ gem install bundler chef berkshelf knife-solo --no-ri --no-rdoc
     $ vagrant plugin install vagrant-foodtaster-server
 
+## Добавление бокса
+
+Перейдите в папку, взятую с флешки и выполните команду:
+
+    $ vagrant box add ubuntu1204 ubuntu1204.box
+
 # Этапы мастеркласса
 
   * [step1](https://github.com/mlapshin/chef-workshop/tree/step1) -
