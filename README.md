@@ -49,3 +49,18 @@
 
     $ gem install bundler chef berkshelf knife-solo --no-ri --no-rdoc
     $ vagrant plugin install vagrant-foodtaster-server
+
+# Этапы мастеркласса
+
+  * [step1](https://github.com/mlapshin/chef-workshop/tree/step1) -
+    чистый chef-репозиторий
+  * [step2](https://github.com/mlapshin/chef-workshop/tree/step2) -
+    элементарный кукбук и тест на него
+  * [step3](https://github.com/mlapshin/chef-workshop/tree/step3) -
+    рецепт для установки PostgreSQL
+  * [step4](https://github.com/mlapshin/chef-workshop/tree/step4) -
+    рецепт redmine::install + спека
+  * [step5](https://github.com/mlapshin/chef-workshop/tree/step5) -
+    рецепт redmine::webserver + спека
+  * [step6](https://github.com/mlapshin/chef-workshop/tree/step6) -
+    готовый кукбук redmine + интеграцонная спека
