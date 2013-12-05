@@ -27,12 +27,6 @@
 
     $ brew install ruby
 
-### Chef
-
-Установите Chef с помощью RubyGems:
-
-    $ gem install chef
-
 ## Linux (Ubuntu)
 
 ### VirtualBox
@@ -51,6 +45,7 @@
 
 Используйте системный руби или установите более свежий с помощью RVM.
 
-### Chef
+## Необходимые гемы
 
-    $ gem install chef
+    $ gem install bundler chef berkshelf knife-solo --no-ri --no-rdoc
+    $ vagrant plugin install vagrant-foodtaster-server
